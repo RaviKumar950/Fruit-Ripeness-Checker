@@ -1,38 +1,21 @@
-print("You can Enter your Fruits of this list","Banana\t","Orange\t","Apple\t")
-fruits = input("Enter Your Fruits:>\t").lower()
-lower_input = fruits.lower()
-print("You can Enter your color of this list: Green\tYellow\tBrown")
-color = input("Enter Your color:>\t").lower() 
+fruitList = ["banana", "orange", "apple"]
 
+# Create a string of lowercase fruits separated by commas
+fruit_list_string = ", ".join([x.lower() for x in fruitList])
 
-if fruits == "banana":
+print("You can enter your fruits from this list: " + fruit_list_string)
+
+fruit = input("Enter your fruit: ").lower()
+color = input("Enter its color: ").lower()
+
+if fruit in fruitList:
     if color == "green":
         print("Unripe")
     elif color == "yellow":
         print("Ripe")
     elif color == "brown":
-        print("OverRipe")
+        print("Overripe")
     else:
-        print("Color Not Recognize")
-elif fruits == "orange":
-    if color == "green":
-        print("Unripe")
-    elif color == "yellow":
-        print("Ripe")
-    elif color == "brown":
-        print("OverRipe")
-    else:
-        print("Color Not Recognize")
-elif fruits == "apple":
-    if color == "green":
-        print("Unripe")
-    elif color == "yellow":
-        print("Ripe")
-    elif color == "brown":
-        print("OverRipe")
-    else:
-        print("Color Not Recognize")
-
+        print("Color not recognized")
 else:
-    print("Fruits Not Recognize")
-
+    print("Fruit not recognized")
